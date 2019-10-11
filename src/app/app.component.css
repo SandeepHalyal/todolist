@@ -1,0 +1,130 @@
+
+    h1 {
+        text-align: center;
+        color: rgba(255, 0, 0, 0.1);
+        font-size: 100px;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 20px;
+    }
+
+    .box {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 20px;
+        margin-top: 0px;
+    }
+
+    .two {
+        text-align: left;
+    }
+
+    input {
+        width: 78%;
+        height: 25px;
+        border: none;
+        font-size: 23px;
+        font-style: italic;
+        outline: none;
+    }
+
+    h2 {
+        display: inline;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .thebtn {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        margin-right: 10px;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        outline: none;
+    }
+
+    .thebtn:focus {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .thebtn:focus img {
+        display: block;
+    }
+
+    .tick {
+        display: none;
+    }
+
+    .dropdown{
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+
+    img{
+        height: 13px;
+        width: 13px;
+    }
+
+    .thebtn:focus+h2 {
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration: line-through;
+    }
+
+    ::placeholder {
+        color: rgba(0, 0, 0, 0.2)
+    }
+
+    .footer {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+    .extra1 {
+        text-align: center;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        margin-left: 25.5%;
+        margin-right: 25.5%;
+        padding: 2px;
+        background-color: rgba(0, 0, 0, 0.01);
+        margin-top: 0px;
+    }
+
+    .extra2 {
+        text-align: center;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        margin-left: 26%;
+        margin-right: 26%;
+        padding: 2px;
+        background-color: rgba(0, 0, 0, 0.01);
+        margin-top: 0px;
+    }
+
+    button,
+    h4 {
+        display: inline;
+    }
+
+    .footbtn{
+        background-color: white;
+        border: none;
+        margin: 3px;
+        border-radius: 3px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .footbtn:focus{
+        outline: 2px solid rgba(255, 99, 71, .2);
+        border-radius: 2px;
+    }
+
+    .footdiv, h4{
+        margin-right: 20%;
+        color: rgba(0, 0, 0, 0.5);
+    }

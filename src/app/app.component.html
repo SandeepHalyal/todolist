@@ -1,0 +1,29 @@
+<section>
+  <h1>todos</h1>
+   <div class="box">
+      <form #addtodo="ngForm" (ngSubmit)="addToDo(addtodo.value)">
+          <img src="../../assets/download2.png" class="dropdown" alt="">
+          <input type="text" name="todo" id="todo" placeholder="What needs to be done?" #todo="ngModel" ngModel>
+          <button type="submit" class="footbtn" style="background-color: rgba(255, 255, 0, .5); padding: 8px;">Add</button>
+      </form>
+  </div>
+  <div class="box two" *ngFor="let todo of thedo">
+      <button id="button" class="thebtn" (click)="leftItems(todo.index)"><img class="tick" id="tick" src="../../assets/download.png" alt=""></button>
+      <h2 style="padding-left: 20px;">{{todo.todo}}</h2>
+      <button class="thebtn" style="float: right; border: none; color: red; font-size: 22px;" (click)="deleteToDo(todo.index)">x</button>
+  </div>
+  <div class="footer">
+      <h4>{{k}} Items</h4>
+      <button class="footbtn">
+          <h4>All</h4>
+      </button>
+      <button class="footbtn">
+          <h4>Active</h4>
+      </button>
+      <button class="footbtn">
+          <h4>Completed</h4>
+      </button>
+  </div>
+  <div class="box extra1"></div>
+  <div class="box extra2"></div>
+</section>
