@@ -1,29 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 <section>
-  <h1>todos</h1>
-   <div class="box">
-      <form #addtodo="ngForm" (ngSubmit)="addToDo(addtodo.value)">
-          <img src="../../assets/download2.png" class="dropdown" alt="">
-          <input type="text" name="todo" id="todo" placeholder="What needs to be done?" #todo="ngModel" ngModel>
-          <button type="submit" class="footbtn" style="background-color: rgba(255, 255, 0, .5); padding: 8px;">Add</button>
-      </form>
-  </div>
-  <div class="box two" *ngFor="let todo of thedo">
-      <button id="button" class="thebtn" (click)="leftItems(todo.index)"><img class="tick" id="tick" src="../../assets/download.png" alt=""></button>
-      <h2 style="padding-left: 20px;">{{todo.todo}}</h2>
-      <button class="thebtn" style="float: right; border: none; color: red; font-size: 22px;" (click)="deleteToDo(todo.index)">x</button>
-  </div>
-  <div class="footer">
-      <h4>{{k}} Items</h4>
-      <button class="footbtn">
-          <h4>All</h4>
-      </button>
-      <button class="footbtn">
-          <h4>Active</h4>
-      </button>
-      <button class="footbtn">
-          <h4>Completed</h4>
-      </button>
-  </div>
-  <div class="box extra1"></div>
-  <div class="box extra2"></div>
+    <h1>todos</h1>
+    <div class="box">
+        <form #addtodo="ngForm" (ngSubmit)="addToDo(addtodo.value)">
+            <img src="../../assets/download2.png" class="dropdown" alt="">
+            <input type="text" name="todo" id="todo" placeholder="What needs to be done?" #todo="ngModel" ngModel>
+            <button type="submit" class="footbtn"
+                style="background-color: rgba(255, 255, 0, .5); padding: 8px; ">Add</button>
+        </form>
+    </div>
+    <div>
+
+        <div *ngIf='all'>
+            <div class="box two" *ngFor="let todo of thedo">
+                <div *ngIf='todo.type'>
+                    <button id="{{todo.index}}" class="thebtn"><img class="tick" id="tick"
+                            src="../../assets/download.png" alt=""></button>
+                    <h2 id="theh2" style="padding-left: 20px;">{{todo.todo}} </h2>
+                    <button class="thebtn" style="float: right; border: none; color: red; font-size: 22px;"
+                        (click)="deleteToDo(todo.index)">x</button>
+                </div>
+                <div *ngIf='!todo.type'>
+                    <button id="{{todo.index}}" class="thebtn"><img class="newimg" src="../../assets/download.png"
+                            alt=""></button>
+                    <h2 id="theh2" class="newh2" style="padding-left: 20px;">{{todo.todo}} </h2>
+                    <button class="thebtn" style="float: right; border: none; color: red; font-size: 22px;"
+                        (click)="deleteToDo(todo.index)">x</button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf='comp'>
+            <div class="empty" *ngFor="let todo of thedo">
+                <div class="box two" *ngIf='!todo.type'>
+                    <button id="{{todo.index}}" class="thebtn"><img class="newimg" src="../../assets/download.png"
+                            alt=""></button>
+                    <h2 id="theh2" class="newh2" style="padding-left: 20px;">{{todo.todo}} </h2>
+                    <button class="thebtn" style="float: right; border: none; color: red; font-size: 22px;"
+                        (click)="deleteToDo(todo.index)">x</button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf='act'>
+            <div class="empty" *ngFor="let todo of thedo">
+                <div class="box two" *ngIf='todo.type'>
+                    <button id="{{todo.index}}" class="thebtn"><img class="tick" src="../../assets/download.png"
+                            alt=""></button>
+                    <h2 id="theh2" style="padding-left: 20px;">{{todo.todo}} </h2>
+                    <button class="thebtn" style="float: right; border: none; color: red; font-size: 22px;"
+                        (click)="deleteToDo(todo.index)">x</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h4>{{k}} Items</h4>
+        <div class="footbtns">
+            <button class="footbtn" (click)="toggleList(1)">
+                <h5>All</h5>
+            </button>
+            <button class="footbtn" (click)="toggleList(2)">
+                <h5>Active</h5>
+            </button>
+            <button class="footbtn" (click)="toggleList(3)">
+                <h5>Completed</h5>
+            </button>
+        </div>
+    </div>
+    <div class="box extra1"></div>
+    <div class="box extra2"></div>
 </section>
+</html>

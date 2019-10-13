@@ -10,8 +10,8 @@
     .box {
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
         background-color: white;
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-left: 20%;
+        margin-right: 20%;
         padding: 20px;
         margin-top: 0px;
     }
@@ -21,7 +21,7 @@
     }
 
     input {
-        width: 78%;
+        width: 80%;
         height: 25px;
         border: none;
         font-size: 23px;
@@ -32,6 +32,7 @@
     h2 {
         display: inline;
         font-family: 'Times New Roman', Times, serif;
+        padding: 10px;
     }
 
     .thebtn {
@@ -44,12 +45,8 @@
         outline: none;
     }
 
-    .thebtn:focus {
-        border: 1px solid rgba(0, 0, 0, 0.5);
-    }
-
-    .thebtn:focus img {
-        display: block;
+    .newbtn {
+        border: 1px solid rgba(255, 0, 0, 0.5);
     }
 
     .tick {
@@ -66,9 +63,10 @@
         width: 13px;
     }
 
-    .thebtn:focus+h2 {
+    .newh2 {
         color: rgba(0, 0, 0, 0.5);
         text-decoration: line-through;
+        display: inline;
     }
 
     ::placeholder {
@@ -78,9 +76,9 @@
     .footer {
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
         background-color: white;
-        margin-left: 25%;
-        margin-right: 25%;
-        padding: 5px;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 10px;
         margin-top: 0px;
     }
 
@@ -88,8 +86,8 @@
         text-align: center;
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
         background-color: white;
-        margin-left: 25.5%;
-        margin-right: 25.5%;
+        margin-left: 20.5%;
+        margin-right: 20.5%;
         padding: 2px;
         background-color: rgba(0, 0, 0, 0.01);
         margin-top: 0px;
@@ -99,8 +97,8 @@
         text-align: center;
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
         background-color: white;
-        margin-left: 26%;
-        margin-right: 26%;
+        margin-left: 21%;
+        margin-right: 21%;
         padding: 2px;
         background-color: rgba(0, 0, 0, 0.01);
         margin-top: 0px;
@@ -114,9 +112,22 @@
     .footbtn{
         background-color: white;
         border: none;
-        margin: 3px;
         border-radius: 3px;
         color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding: 1px 6px;
+        margin-right: 2px;
+    }
+
+    h5{
+        margin: 3px
+    }
+
+    .footbtns{
+        display: inline;
+        margin-right: 0px;
+        position: relative;
+        float: right;
     }
 
     .footbtn:focus{
@@ -125,6 +136,9 @@
     }
 
     .footdiv, h4{
-        margin-right: 20%;
         color: rgba(0, 0, 0, 0.5);
+    }
+
+    .empty{
+        margin: 0%; padding: 0%;
     }
